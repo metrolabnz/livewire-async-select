@@ -85,6 +85,7 @@ trait ManagesRemoteData
                 $this->remoteOptionsMap = array_replace($this->remoteOptionsMap, $normalized);
             } else {
                 $this->remoteOptionsMap = $normalized;
+                $this->clonedRemoteOptionsMap = $this->remoteOptionsMap;
             }
 
             $this->cacheOptions($normalized);
